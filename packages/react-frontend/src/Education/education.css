@@ -24,16 +24,16 @@
     height: 500px;
 }
 
-#ghidottis {
-    background-image: url('../images/browse.jpeg');
+#calpoly {
+    background-image: url('../images/calpoly.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 500p
 }
 
-#projects {
-    background-image: url('../images/myrecipes.jpeg');
+#pchs {
+    background-image: url('../images/pchs.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

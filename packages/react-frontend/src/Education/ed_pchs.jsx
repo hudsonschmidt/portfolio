@@ -8,7 +8,7 @@ function EdPCHS() {
                 <p>Graduate of Park City High School in June 2023 with a 4.3 GPA and a seal of biliteracy in French.</p>
                 <a href="projects" class="btn" id="button">See More...</a>
             </div>
-            <div id="projects" class="col-sm-6"></div>
+            <div id="pchs" class="col-sm-6"></div>
         </div>
       );
     }

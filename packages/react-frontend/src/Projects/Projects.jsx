@@ -5,7 +5,8 @@ const Projects = () => {
   const [projects, setRecipes] = useState([
     { id: 1, name: 'Stein Eriksen Collection Websites', image: '../images/stein.jpg' },
     { id: 2, name: 'Bite & Byte', image: '../images/bitebyte.png' },
-    { id: 3, name: 'Haptic Feedback System for Blind Marching Band', image: '../images/empower.jpeg' },
+    { id: 3, name: 'Portfolio Website', image: '../images/portfolio.png' },
+    { id: 4, name: 'Haptic Feedback System for Blind Marching Band', image: '../images/empower.jpeg' },
   ]);
 
   const handleScroll = (e) => {};
