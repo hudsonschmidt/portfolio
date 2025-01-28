@@ -7,7 +7,7 @@ function ExpWow() {
         <div id="column-2" class="col-sm-6">
             <h3>Orientation Leader</h3>
             <p>After 10+ weeks of training, I was responsible for 24 freshmen students at Cal Poly for orientation week. I introduced them to the town, school, and helped them get acclimated to the college environment by planning activities from 8am to 10pm daily and leading processing after lectures.</p>
-            <a href="#" class="btn" id="button">See More...</a>
+            <a href="https://orientation.calpoly.edu/our-team/wow-leaders" class="btn" id="button" target="new">WOW Leader info</a>
         </div>
     </div>
   );
