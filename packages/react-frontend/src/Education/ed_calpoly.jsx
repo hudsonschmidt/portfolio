@@ -7,7 +7,7 @@ function EdCalPoly() {
         <div id="column-2" class="col-sm-6">
             <h3>Cal Poly</h3>
             <p>Second-year undergraduate student majoring in Computer Science with a concentration in Cybersecurity.</p>
-            <a href="#" class="btn" id="button">See More...</a>
+            <a href="https://www.calpoly.edu/" class="btn" id="button" target="new">Cal Poly</a>
         </div>
     </div>
   );
