@@ -1,9 +1,10 @@
 import React from 'react';
-import file from "./Resume.pdf"
+import file from "./Resume.pdf";
+import './resume.css';
 
 function Resume() {
     return (
-        <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+        <div id="resumebody">
             <h1>Resume</h1>
 
             <embed src={file} width="900px" height="1200px" />

@@ -8,7 +8,7 @@ function ExpBD() {
                 <p>Currently working all front-of-house positions which allows me to help out across the restaurant where needed throughout the night including running the kitchen by garnishing and timing every dish sent out.</p>
                 <a href="projects" class="btn" id="button">See More...</a>
             </div>
-            <div id="projects" class="col-sm-6"></div>
+            <div id="bd" class="col-sm-6"></div>
         </div>
       );
     }

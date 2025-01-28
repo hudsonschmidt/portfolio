@@ -14,8 +14,8 @@
     height: 500px;
 }
 
-#experience_education {
-    background-image: url('../images/browse.jpeg');
+#experience {
+    background-image: url('../images/experience.JPG');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -23,7 +23,15 @@
 }
 
 #projects {
-    background-image: url('../images/myrecipes.jpeg');
+    background-image: url('../images/projects.PNG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500p
+}
+
+#education {
+    background-image: url('../images/education.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

@@ -24,16 +24,24 @@
     height: 500px;
 }
 
-#ghidottis {
-    background-image: url('../images/browse.jpeg');
+#wow {
+    background-image: url('../images/wow.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 500p
 }
 
-#projects {
-    background-image: url('../images/myrecipes.jpeg');
+#bd {
+    background-image: url('../images/bd.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500p
+}
+
+#ghidottis {
+    background-image: url('../images/ghidottis.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
