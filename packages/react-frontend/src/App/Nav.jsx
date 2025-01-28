@@ -18,13 +18,13 @@ function Nav() {
                         <Link className="nav-link" to="#">Experience</Link>
                     </li>
                     <li class="nav-item">
-                        <Link className="nav-link" to="#">Projects</Link>
+                        <Link className="nav-link" to="projects">Projects</Link>
                     </li>
                     <li class="nav-item">
                         <Link className="nav-link" to="#">Education</Link>
                     </li>
                     <li class="nav-item">
-                        <Link className="nav-link" to="#">Resume</Link>
+                        <Link className="nav-link" to="resume">Resume</Link>
                     </li>
                 </ul>
             </div>

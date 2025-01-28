@@ -14,7 +14,7 @@
     height: 500px;
 }
 
-#browse {
+#experience_education {
     background-image: url('../images/browse.jpeg');
     background-size: cover;
     background-position: center;
@@ -22,7 +22,7 @@
     height: 500p
 }
 
-#myrecipes {
+#projects {
     background-image: url('../images/myrecipes.jpeg');
     background-size: cover;
     background-position: center;
