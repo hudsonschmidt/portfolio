@@ -8,20 +8,20 @@
     margin-top: 60px;
   }
 
-#column-0 {
+#exp_about {
     background-color: #333333;
     padding: 70px; 
     text-align: center; 
-    height: 300px;
+    height: 200px;
     line-height: 25px;
     color: #F5F5F5;
 }
 
-#column-2 {
+#exp_txt {
     background-color:#f9f9f9;
     padding: 150px;
     text-align: center;
-    height: 500px;
+    height: 600px;
 }
 
 #wow {
@@ -40,8 +40,8 @@
     height: 500p
 }
 
-#ghidottis {
-    background-image: url('../images/ghidottis.jpg');
+#pf {
+    background-image: url('../images/packfey.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
