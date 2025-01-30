@@ -1,8 +1,8 @@
 #resumebody {
     margin-top: 70px;
-    font-family:'Helvetica';
-    font-style:normal;
-    font-weight:100;
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 100;
     background-color: #F5F5F5;
     overflow-x: hidden;
     padding: 0;
@@ -11,4 +11,15 @@
 
 h1 {
     margin-bottom: 20px;
+}
+
+/* Responsive design for mobile */
+@media screen and (max-width: 768px) {
+    #resumebody {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
 }

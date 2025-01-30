@@ -1,14 +1,14 @@
 #column-0 {
     background-color: #333333;
-    padding: 70px; 
-    text-align: left; 
+    padding: 70px;
+    text-align: left;
     height: 300px;
     line-height: 25px;
     color: #F5F5F5;
 }
 
 #column-2 {
-    background-color:#f9f9f9;
+    background-color: #f9f9f9;
     padding: 150px;
     text-align: left;
     height: 500px;
@@ -46,4 +46,21 @@
 
 #button:hover {
     background-color: rgba(0, 0, 0, 0.35);
+}
+
+/* Responsive design for mobile */
+@media screen and (max-width: 768px) {
+
+    #column-0,
+    #column-2 {
+        padding: 50px;
+        text-align: center;
+        height: auto;
+    }
+
+    #experience,
+    #projects,
+    #education {
+        height: 300px;
+    }
 }

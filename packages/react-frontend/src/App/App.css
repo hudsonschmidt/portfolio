@@ -6,3 +6,10 @@
   overflow-x: hidden;
   padding: 0;
 }
+
+/* Responsive design for mobile */
+@media screen and (max-width: 768px) {
+  #app {
+    padding: 10px;
+  }
+}

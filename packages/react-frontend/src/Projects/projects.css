@@ -94,3 +94,16 @@
 .close-button:hover {
     background-color: rgba(0, 0, 0, 0.35);
 }
+
+/* Responsive design for mobile */
+@media screen and (max-width: 768px) {
+    .card {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .card.expanded {
+        width: 95%;
+        top: 30px;
+    }
+}

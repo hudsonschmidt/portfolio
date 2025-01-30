@@ -1,54 +1,60 @@
 #body {
-    font-family:'Helvetica';
-    font-style:normal;
-    font-weight:100;
-    background-color: #F5F5F5;
-    overflow-x: hidden;
-    padding: 0;
-  }
-  
-  .jumbotron {
-    background-image: url('../images/bg1.jpg');
-    padding: 40vh 2rem;
-    margin-top: 60px; /* To ensure spacing from fixed navbar */
-    color: #F5F5F5;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size:cover;
-  }
-  
-  .jumbotron h1 {
-    font-size: 2.5em; 
-    font-weight: bold;
-    text-align: right;
-  }
-  
-  .jumbotron p {
-    font-size: 1.0em;
-    text-align: right;
-  }
-  /* 
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 100;
+  background-color: #F5F5F5;
+  overflow-x: hidden;
+  padding: 0;
+}
+
+.jumbotron {
+  background-image: url('../images/bg1.jpg');
+  padding: 40vh 2rem;
+  margin-top: 60px;
+  /* To ensure spacing from fixed navbar */
+  color: #F5F5F5;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.jumbotron h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  text-align: right;
+}
+
+.jumbotron p {
+  font-size: 1.0em;
+  text-align: right;
+}
+
+/* 
   #header{
     background-color: #2f484f;
   } */
-  
-  /* Mobile responsiveness */
-  @media (max-width: 768px) {
-    .navbar-brand {
-        font-size: 1.2rem;
-    }
-  
-    .nav-link {
-        font-size: 0.9rem;
-        margin: 0 5px;
-    }
-  
-    .jumbotron h1 {
-        font-size: 2.5rem;
-    }
-  
-    .jumbotron p {
-        font-size: 1rem;
-    }
-  } 
-  
+
+/* Responsive design for mobile */
+@media screen and (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+    margin: 0 5px;
+  }
+
+  .jumbotron {
+    padding: 20vh 1rem;
+    text-align: center;
+  }
+
+  .jumbotron h1 {
+    font-size: 2rem;
+  }
+
+  .jumbotron p {
+    font-size: 1rem;
+  }
+}
