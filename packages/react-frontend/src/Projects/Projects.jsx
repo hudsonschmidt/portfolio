@@ -7,7 +7,7 @@ const Projects = () => {
       id: 1,
       name: 'Azores Ecological Survey',
       date: 'July 2022 - July 2022',
-      image: '/images/stein.jpg',
+      image: '/images/horta.jpg',
       description: 'I spent two weeks in the Azores Islands, off the coast of Portugal, conducting underwater surveys aimed at marine conservation. This opportunity was organized by the Padma Organization (a volunteer non-profit) in collaboration with Conservation Diver and Dive Azores, in partnership with the University of the Azores. Our team surveyed reefs just outside an established protected area to show that marine biodiversity there was as diverse as within the boundaries. The resulting report was submitted to the Portuguese government as evidence to support expanding the protected zone to help protect these vibrant marine ecosystems for the future.',
     },
     {
@@ -21,7 +21,7 @@ const Projects = () => {
       id: 3,
       name: 'Manta Ray Conservation in Bali',
       date: 'July 2023 - July 2023',
-      image: '/images/stein.jpg',
+      image: '/images/bali.jpg',
       description: 'I spent two weeks in Bali and Komodo National Park, dividing my time between marine conservation and environmental cleanup efforts. For one week, I lived on a sailboat, exploring diverse ecosystems and participating in garbage collection on remote islands—particularly important in Indonesia as they are one of the world’s top plastic polluters. The following week was dedicated to manta ray conservation on Nusa Lembongan, an island off the coast of Bali. We free-dived at reef “cleaning stations” to photograph each manta’s unique belly markings, enabling Blue Corner Marine Research to track and monitor their health and whereabouts. This work was arranged by the Padma Organization and carried out in collaboration with the non-profits Conservation Diver and Blue Corner Marine Research.',
     },
     {
@@ -42,7 +42,7 @@ const Projects = () => {
       id: 6,
       name: 'Haptic Feedback System for Blind Marching Band',
       date: 'December 2024 - Current',
-      image: '/images/empower.jpeg',
+      image: '/images/pwmb.jpg',
       description: 'I am currently the software lead spearheading the conceptualization and overall system design of an innovative haptic feedback solution aimed at enabling visually impaired musicians to march independently in parades. We are developing software for a laptop to communicate via Bluetooth Low Energy (BLE) with a series of ESP32 microcontrollers, which relay instructions to four haptic motors sewn into the headbands of the musicians. Throughout the project, we are working through the end-to-end prototyping, testing, and iterative refinement process, utilizing CAD tools and programming to enhance system reliability, functionality, and user experience based on real-world feedback.',
     },
   ]);

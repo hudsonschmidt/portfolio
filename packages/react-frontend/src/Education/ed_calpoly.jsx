@@ -9,6 +9,7 @@ function EdCalPoly() {
           <br></br>
           September 2023 - Current</p>
         <p>Second-year undergraduate student majoring in Computer Science with a concentration in Cybersecurity.</p>
+        {/* <img id="ed_calpoly" src="../images/calpoly.png"></img> */}
       </div>
       <div id="ed_col" class="col-sm-6">
         <h3>Park City High School</h3>

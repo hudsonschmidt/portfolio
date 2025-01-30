@@ -33,7 +33,15 @@
 }
 
 #bd {
-    background-image: url('../images/bd.png');
+    background-image: url('../images/bd.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500p
+}
+
+#ghidottis {
+    background-image: url('../images/ghidottis.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
