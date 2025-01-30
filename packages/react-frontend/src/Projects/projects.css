@@ -13,11 +13,13 @@
 
 .card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;       /* default position */
+    position: relative;
+    /* default position */
     border: 1px solid #ccc;
     border-radius: 4px;
     cursor: pointer;
-    transition: all 0.3s ease;  /* smooth transitions */
+    transition: all 0.3s ease;
+    /* smooth transitions */
 }
 
 .card:hover {
@@ -35,10 +37,18 @@
 
 .card.expanded .card-img-top {
     display: none;
-  }
+}
 
 .card-title {
     text-align: center;
+}
+
+.card.expanded .card-title {
+    text-align: left;
+}
+
+.card.expanded .card-date {
+    text-align: left;
 }
 
 .card-body {

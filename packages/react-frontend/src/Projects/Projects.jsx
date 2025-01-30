@@ -15,7 +15,7 @@ const Projects = () => {
       name: 'Stein Eriksen Collection Websites',
       date: 'January 2023 - May 2023',
       image: '/images/stein.jpg',
-      description: '- Worked with the HR team for the Stein Eriksen Collection to redesign all their websites to help one of the premier hotels at Deer Valley appear less outdated.\n- Created wireframes and a clickable prototype that were used to create the current website.\n- The redesign was successfully implemented and the current design follows the original wireframes and design suggestions provided.',
+      description: 'I collaborated with the HR team for the Stein Eriksen Collection to redesign all their websites, helping one of the premier hotels at Deer Valley refresh its online presence and appeal to a younger audience. I created wireframes and a clickable prototype that were instrumental in shaping the current website design. The redesign was successfully implemented, with the final design closely following the original wireframes and design suggestions I provided, resulting in a modernized and engaging online experience.',
     },
     {
       id: 3,
@@ -29,21 +29,21 @@ const Projects = () => {
       name: 'Bite & Byte',
       date: 'October 2024 - December 2024',
       image: '/images/bitebyte.png',
-      description: 'Software lead, worked in a group of five using React to develop a responsive, intuitive, and well-designed web application that utilized a backend database to store and display recipes.\n- Website and database use a login/register system that creates unique tokens to help ensure data security and privacy.\n- Lead the frontend development and design of the webpage',
+      description: 'As the software lead in a team of five, I played a key role in developing a responsive and intuitive web application using React. The application was designed to store and display recipes efficiently, leveraging a backend database for seamless data management. To ensure data security and privacy, we implemented a login and registration system that generates unique tokens for user authentication. My primary responsibility was leading the frontend development and design, ensuring a user-friendly interface that enhances the overall user experience. Through effective collaboration and problem-solving, our team successfully created a well-designed, functional, and secure platform for recipe management.',
     },
     {
       id: 5,
       name: 'Portfolio Website',
       date: 'January 2025 - February 2025',
       image: '/images/portfolio.png',
-      description: 'Website details',
+      description: 'I started building my idea for a portfolio website in August of 2023 in straight HTML and CSS however once I went back to school, it fell abandoned. Then following my software engineering class where I learned how to create and deploy a website using React I picked up where I left off and worked to create an environment where I can showcase all I have been able to acomplish and what I am currently working on. I built this entire website using React jsx and CSS on VSCode and made it modular so it is easy to add information in the future.',
     },
     {
       id: 6,
       name: 'Haptic Feedback System for Blind Marching Band',
       date: 'December 2024 - Current',
       image: '/images/empower.jpeg',
-      description: '- Software lead spearheading the conceptualization and overall system design, focusing on developing an innovative haptic feedback solution to empower visually impaired musicians to march independently in parades.\n- Writing code for a laptop to connect via BLE (Bluetooth Low Energy) to a series of microcontrollers (ESP32s) that will send instructions via four haptic motors sewn into the headbands of the musicians.\n- Working through the end-to-end prototyping, testing, and iterative refinement process, applying CAD tools and programming to enhance system reliability, functionality, and user experience based on real-world feedback.',
+      description: 'I am currently the software lead spearheading the conceptualization and overall system design of an innovative haptic feedback solution aimed at enabling visually impaired musicians to march independently in parades. We are developing software for a laptop to communicate via Bluetooth Low Energy (BLE) with a series of ESP32 microcontrollers, which relay instructions to four haptic motors sewn into the headbands of the musicians. Throughout the project, we are working through the end-to-end prototyping, testing, and iterative refinement process, utilizing CAD tools and programming to enhance system reliability, functionality, and user experience based on real-world feedback.',
     },
   ]);
 
@@ -66,12 +66,12 @@ const Projects = () => {
         <div id="sidebar" className="col-md-3 bg-light p-4">
           <h2>Projects</h2>
           <p>
-            I have been a part of multiple amazing opportunities that have made real-world
+            I have been a part of several incredible opportunities that have made real-world
             differences. My current project is through the Empower Club at Cal Poly where
             we are designing a haptic headband to guide a blind marching band through
             their parade route.
             <br></br>
-            I've also put two of my volunteering opportunities as they have both had lasting influences on who I am today.
+            I've also added two of my volunteering opportunities as they have both had lasting influences on who I am today.
           </p>
         </div>
 

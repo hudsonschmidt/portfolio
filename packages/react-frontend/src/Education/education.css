@@ -11,7 +11,7 @@
 #ed_about {
     background-color: #333333;
     padding: 70px; 
-    text-align: center; 
+    text-align: left; 
     height: 250px;
     line-height: 25px;
     color: #F5F5F5;
@@ -20,7 +20,7 @@
 #ed_col {
     background-color:#f9f9f9;
     padding: 150px;
-    text-align: center;
+    text-align: left;
     height: 500px;
 }
 
