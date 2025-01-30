@@ -4,11 +4,20 @@
 
 #sidebar {
     margin-top: 20vh;
-    
+
+}
+
+.card-date {
+    text-align: center;
 }
 
 .card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;       /* default position */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;  /* smooth transitions */
 }
 
 .card:hover {
@@ -18,32 +27,60 @@
 
 
 .card-img-top {
-  width: 100%;        
-  height: 250px;      
-  object-fit: fill;  
-  object-position: center; 
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
 }
 
-.card-title{
+.card.expanded .card-img-top {
+    display: none;
+  }
+
+.card-title {
     text-align: center;
 }
 
-  /* Mobile responsiveness */
-@media (max-width: 768px) {
-    .navbar-brand {
-        font-size: 1.2rem;
-    }
-  
-    .nav-link {
-        font-size: 0.9rem;
-        margin: 0 5px;
-    }
-  
-    .jumbotron h1 {
-        font-size: 2.5rem;
-    }
-  
-    .jumbotron p {
-        font-size: 1rem;
-    }
-  } 
+.card-body {
+    padding: 16px;
+}
+
+/* Additional info hidden by default (shown only if expanded) */
+.additional-info {
+    margin-top: 10px;
+}
+
+/* The 'expanded' class changes positioning to float over other cards */
+.card.expanded {
+    position: absolute;
+    /* absolute so it can overlap */
+    top: 50px;
+    /* adjust to where you want it to appear */
+    left: 50%;
+    /* we’ll center it horizontally (with transform) */
+    transform: translateX(-50%);
+    /* center the card on the X-axis */
+    width: 80%;
+    /* expand to a larger width than normal */
+    z-index: 9999;
+    /* ensure it's on top of everything in the container */
+    background: #fff;
+    /* white background so it clearly floats */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* optional: set a fixed height or let it grow with content */
+}
+
+/* Close button styling */
+.close-button {
+    margin-top: 10px;
+    padding: 6px 12px;
+    color: black;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    background-color: rgba(0, 0, 0, 0.35);
+}
