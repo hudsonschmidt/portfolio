@@ -36,7 +36,7 @@ const Projects = () => {
       name: 'Portfolio Website',
       date: 'January 2025 - February 2025',
       image: '/images/portfolio.png',
-      description: 'I started building my idea for a portfolio website in August of 2023 in straight HTML and CSS however once I went back to school, it fell abandoned. Then following my software engineering class where I learned how to create and deploy a website using React I picked up where I left off and worked to create an environment where I can showcase all I have been able to acomplish and what I am currently working on. I built this entire website using React jsx and CSS on VSCode and made it modular so it is easy to add information in the future.',
+      description: 'I started building my idea for a portfolio website in August of 2023 in straight HTML and CSS however once I went back to school, it fell abandoned. Then following my software engineering class where I learned how to create and deploy a website using React I picked up where I left off and worked to create an environment where I can showcase all I have been able to accomplish and what I am currently working on. I built this entire website using React jsx and CSS on VSCode and made it modular so it is easy to add information in the future.',
     },
     {
       id: 6,
