@@ -3,12 +3,20 @@ import React from "react";
 function EdCalPoly() {
   return (
     <div class="row">
-        <div id="calpoly" class="col-sm-6"></div>
-        <div id="column-2" class="col-sm-6">
-            <h3>Cal Poly</h3>
-            <p>Second-year undergraduate student majoring in Computer Science with a concentration in Cybersecurity.</p>
-            <a href="https://www.calpoly.edu/" class="btn" id="button" target="new">Cal Poly</a>
-        </div>
+      <div id="ed_col" class="col-sm-6">
+        <h3>California Polytechnic University</h3>
+        <p>San Luis Obispo, California
+          <br></br>
+          September 2023 - Current</p>
+        <p>Second-year undergraduate student majoring in Computer Science with a concentration in Cybersecurity.</p>
+      </div>
+      <div id="ed_col" class="col-sm-6">
+        <h3>Park City High School</h3>
+        <p>Park City, Utah
+          <br></br>
+          August 2019 - June 2023</p>
+        <p>Graduate of Park City High School in June 2023 with a 4.3 GPA and a seal of biliteracy in French.</p>
+      </div>
     </div>
   );
 }

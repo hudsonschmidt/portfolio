@@ -7,7 +7,7 @@ function ExpBD() {
                 <h3>Blind Dog Restraunt</h3>
                 <p>Host, Food Runner, Expediter
                     <br></br>
-                    January 2023 - Present</p>
+                    January 2023 - Current</p>
                 <p>Currently seasonaly working all front-of-house positions which allows me to help out across the restaurant where needed throughout the night including running the kitchen by garnishing and timing every dish sent out.</p>
                 <a href="https://www.blinddogpc.com/" class="btn" id="button" target="new">Blind Dog</a>
             </div>

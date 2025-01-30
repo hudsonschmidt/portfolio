@@ -8,16 +8,16 @@
     margin-top: 60px;
   }
 
-#column-0 {
+#ed_about {
     background-color: #333333;
     padding: 70px; 
     text-align: center; 
-    height: 300px;
+    height: 250px;
     line-height: 25px;
     color: #F5F5F5;
 }
 
-#column-2 {
+#ed_col {
     background-color:#f9f9f9;
     padding: 150px;
     text-align: center;
@@ -30,22 +30,4 @@
     background-position: center;
     background-repeat: no-repeat;
     height: 500p
-}
-
-#pchs {
-    background-image: url('../images/pchs.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 500p
-}
-
-#button {
-    color: black;
-    background-color: rgba(0, 0, 0, 0.2);
-
-}
-
-#button:hover {
-    background-color: rgba(0, 0, 0, 0.35);
 }

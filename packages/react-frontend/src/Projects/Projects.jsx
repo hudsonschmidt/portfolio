@@ -41,7 +41,7 @@ const Projects = () => {
     {
       id: 6,
       name: 'Haptic Feedback System for Blind Marching Band',
-      date: 'December 2024 - Present',
+      date: 'December 2024 - Current',
       image: '/images/empower.jpeg',
       description: '- Software lead spearheading the conceptualization and overall system design, focusing on developing an innovative haptic feedback solution to empower visually impaired musicians to march independently in parades.\n- Writing code for a laptop to connect via BLE (Bluetooth Low Energy) to a series of microcontrollers (ESP32s) that will send instructions via four haptic motors sewn into the headbands of the musicians.\n- Working through the end-to-end prototyping, testing, and iterative refinement process, applying CAD tools and programming to enhance system reliability, functionality, and user experience based on real-world feedback.',
     },
