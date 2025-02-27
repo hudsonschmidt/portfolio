@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://www.hudson-schmidt.com",
+  "homepage": "https://www.hudsonschmidt.com",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

@@ -10,7 +10,7 @@ function ExpWow() {
               <br></br>
               April 2024 - September 2024
             </p>
-            <p>After 10+ weeks of training, I was responsible for 24 freshmen students at Cal Poly for orientation week. I introduced them to the town, school, and helped them get acclimated to the college environment by planning activities from 8am to 10pm daily and leading processing after lectures.</p>
+            <p>After over 10 weeks of training, I led a five-day orientation program for my group of 24 incoming freshmen at Cal Poly. I guided them through structured, day-long activities—from 8 AM to 10 PM—that introduced essential aspects of campus life, local culture, and academic expectations. Additionally, I led processing sessions after lectures to ensure a smooth transition into the college environment.</p>
         </div>
     </div>
   );
