@@ -1,6 +1,5 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Tracker from '../components/Tracker.jsx';
 
 import Nav from "./Nav"
 import Home from "../Home/Home.jsx"
@@ -15,7 +14,6 @@ import "./app.css"
 function App() {
   return (
     <div id = "app" className="container-fluid">
-      <Tracker />
       <Nav />
       <Routes>
         <Route path="/" element={<Home/>} />
