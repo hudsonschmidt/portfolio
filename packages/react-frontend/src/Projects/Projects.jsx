@@ -43,7 +43,7 @@ const Projects = () => {
       name: 'Haptic Feedback System for Blind Marching Band',
       date: 'December 2024 - Current',
       image: '/images/pwmb.jpg',
-      description: 'I am currently the software lead spearheading the conceptualization and overall system design of an innovative haptic feedback solution aimed at enabling visually impaired musicians to march independently in parades. We are developing software for a laptop to communicate via Bluetooth Low Energy (BLE) with a series of ESP32 microcontrollers, which relay instructions to four haptic motors sewn into the headbands of the musicians. Throughout the project, we are working through the end-to-end prototyping, testing, and iterative refinement process, utilizing CAD tools and programming to enhance system reliability, functionality, and user experience based on real-world feedback.',
+      description: 'I am currently the software lead spearheading the conceptualization and overall system design of an innovative haptic feedback solution aimed at enabling visually impaired musicians to march independently in parades. We are developing software for a laptop to connect to a custom WIFI network and utilize the ESP NOW protocol to communicate between ESP32 boards that will receive instructions via four haptic motors sewn into the headbands of the musicians. Throughout the project, we are working through the end-to-end prototyping, testing, and iterative refinement process, utilizing CAD tools and programming to enhance system reliability, functionality, and user experience based on real-world feedback.',
     },
   ]);
 
