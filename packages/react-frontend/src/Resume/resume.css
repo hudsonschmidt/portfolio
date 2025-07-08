@@ -1,5 +1,5 @@
 #resumebody {
-    margin-top: 70px;
+    margin-top: 80px;
     font-family: 'Helvetica';
     font-style: normal;
     font-weight: 100;
@@ -10,7 +10,7 @@
 }
 
 h1 {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 /* Responsive design for mobile */
