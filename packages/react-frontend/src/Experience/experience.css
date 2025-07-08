@@ -10,75 +10,110 @@
 
 #exp_about {
     background-color: #333333;
-    padding: 70px;
+    padding: 4rem 2rem;
     text-align: left;
-    height: 200px;
-    line-height: 25px;
+    min-height: 200px;
+    line-height: 1.6;
     color: #F5F5F5;
 }
 
 #exp_txt {
     background-color: #f9f9f9;
-    padding: 150px;
+    padding: 4rem 2rem;
     text-align: left;
-    height: 600px;
+    min-height: 600px;
+}
+
+#wow, #bd, #ghidottis, #pf {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 500px;
+    position: relative;
+}
+
+#wow::before, #bd::before, #ghidottis::before, #pf::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease;
+}
+
+#wow:hover::before, #bd:hover::before, #ghidottis:hover::before, #pf:hover::before {
+    background: rgba(0, 0, 0, 0.5);
 }
 
 #wow {
     background-image: url('../images/wow.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 500p
 }
 
 #bd {
     background-image: url('../images/bd.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 500p
 }
 
 #ghidottis {
     background-image: url('../images/ghidottis.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 500p
 }
 
 #pf {
     background-image: url('../images/packfey.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 500p
 }
 
 #button {
-    color: black;
-    background-color: rgba(0, 0, 0, 0.2);
-
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 1rem;
 }
 
 #button:hover {
-    background-color: rgba(0, 0, 0, 0.35);
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: translateY(-2px);
 }
 
 /* Responsive design for mobile */
 @media screen and (max-width: 768px) {
-
     #exp_about,
     #exp_txt {
-        padding: 50px;
+        padding: 2rem 1rem;
         text-align: center;
     }
 
-    #wow,
-    #bd,
-    #ghidottis,
-    #pf {
-        height: 300px;
+    #wow, #bd, #ghidottis, #pf {
+        min-height: 300px;
+    }
+
+    .row {
+        margin: 0;
+    }
+
+    .col-sm-6 {
+        padding: 0;
+    }
+
+    #button {
+        width: 100%;
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+}
+
+/* Tablet and medium screens */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    #exp_about,
+    #exp_txt {
+        padding: 3rem 2rem;
+    }
+
+    #wow, #bd, #ghidottis, #pf {
+        min-height: 400px;
     }
 }
