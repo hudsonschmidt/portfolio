@@ -1,0 +1,1 @@
+## Backend for **[hudsonschmidt.com](https://www.hudsonschmidt.com)**
