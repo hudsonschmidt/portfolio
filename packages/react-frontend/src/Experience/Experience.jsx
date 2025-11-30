@@ -1,4 +1,3 @@
-import React from 'react';
 import ExpAbout from './exp_about';
 import ExpPF from './exp_pf';
 import ExpGhidottis from './exp_ghidottis'

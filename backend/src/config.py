@@ -14,12 +14,18 @@ class Settings:
     POSTGRES_URI: str | None = os.getenv("POSTGRES_URI")
 
     def __init__(self):
+        missing = []
         if not self.API_KEY:
-            raise ValueError("API_KEY is missing in the environment variables.")
+            missing.append("API_KEY")
         if not self.POSTGRES_URI:
-            raise ValueError("POSTGRES_URI is missing in the environment variables.")
+            missing.append("POSTGRES_URI")
+        if missing:
+            raise ValueError(
+                f"Missing required environment variables: {', '.join(missing)}. "
+                f"Please set them in your .env file or environment."
+            )
 
 
 @lru_cache()
-def get_settings():
+def get_settings() -> Settings:
     return Settings()

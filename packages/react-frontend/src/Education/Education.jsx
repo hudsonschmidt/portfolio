@@ -1,4 +1,3 @@
-import React from 'react';
 import EdAbout from './ed_about';
 import EdCalPoly from './ed_calpoly';
 import './education.css';

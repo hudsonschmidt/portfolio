@@ -1,10 +1,8 @@
-import React from "react";
-
 function ExpWow() {
   return (
-    <div class="row">
-        <div id="wow" class="col-sm-6"></div>
-        <div id="exp_txt" class="col-sm-6">
+    <div className="row">
+        <div id="wow" className="col-sm-6"></div>
+        <div id="exp_txt" className="col-sm-6">
             <h3>Cal Poly NSTP</h3>
             <p>Orientation Leader
               <br></br>

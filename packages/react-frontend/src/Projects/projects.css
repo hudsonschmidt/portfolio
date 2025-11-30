@@ -10,6 +10,13 @@
     border-radius: 0.5rem;
 }
 
+.project-main {
+    overflow-y: auto;
+    height: calc(100vh - 56px);
+    padding: 20px;
+    position: relative;
+}
+
 .card-date {
     text-align: center;
     color: #666;

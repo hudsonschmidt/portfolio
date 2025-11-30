@@ -1,10 +1,8 @@
-import React from "react";
-
 function ExpBD() {
     return (
-        <div class="row">
-            <div id="bd" class="col-sm-6"></div>
-            <div id="exp_txt" class="col-sm-6">
+        <div className="row">
+            <div id="bd" className="col-sm-6"></div>
+            <div id="exp_txt" className="col-sm-6">
                 <h3>Blind Dog Restaurant</h3>
                 <p>Host, Food Runner, Expediter
                     <br></br>

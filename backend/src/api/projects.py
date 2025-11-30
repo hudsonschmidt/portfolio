@@ -1,9 +1,13 @@
-from fastapi import APIRouter, Depends, status, HTTPException
-from pydantic import BaseModel, Field, field_validator
+import logging
+from fastapi import APIRouter, Depends, HTTPException
+from pydantic import BaseModel
 from typing import List
 from src.api import auth
 import sqlalchemy
+from sqlalchemy.exc import SQLAlchemyError
 from src import database as db
+
+logger = logging.getLogger(__name__)
 
 router = APIRouter(
     prefix="/projects",
@@ -23,25 +27,29 @@ def get_projects() -> List[Project]:
     """
     Retrieves all projects and respective details.
     """
-    with db.engine.begin() as connection:
-        results = connection.execute(
-            sqlalchemy.text(
-                """
-                SELECT *
-                FROM project_data
-                """
-            )
-        ).fetchall()
+    try:
+        with db.engine.begin() as connection:
+            results = connection.execute(
+                sqlalchemy.text(
+                    """
+                    SELECT *
+                    FROM project_data
+                    """
+                )
+            ).fetchall()
 
-        projects = []
-        for row in results:
-            project = Project(
-                id=row.id,
-                name=row.name,
-                date=row.date,
-                desc=row.desc,
-                img=row.img
-            )
-            projects.append(project)
-    
-    return projects
+            projects = []
+            for row in results:
+                project = Project(
+                    id=row.id,
+                    name=row.name,
+                    date=row.date,
+                    desc=row.desc,
+                    img=row.img
+                )
+                projects.append(project)
+
+        return projects
+    except SQLAlchemyError as e:
+        logger.error("Database error fetching projects: %s", e)
+        raise HTTPException(status_code=503, detail="Database unavailable")

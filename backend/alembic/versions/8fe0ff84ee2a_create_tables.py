@@ -38,4 +38,10 @@ def upgrade() -> None:
 
 def downgrade() -> None:
     """Downgrade schema."""
-    pass
+    op.drop_table('resume')
+    op.drop_table('project_data')
+    # Note: global_inventory data is lost and cannot be recovered
+    op.create_table(
+        'global_inventory',
+        sa.Column('id', sa.Integer, primary_key=True),
+    )

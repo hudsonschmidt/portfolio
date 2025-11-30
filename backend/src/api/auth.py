@@ -13,7 +13,6 @@ async def get_api_key(
 ):
     # pick whichever one was provided
     key = header or query
-    print(f"header: {header!r}, query: {query!r}, configured: {api_key!r}")
     if key == api_key:
         return key
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from 'react-router-dom';
 import "./nav.css";
 
@@ -39,7 +39,7 @@ function Nav() {
           </ul>
         </div>
         <div className="d-flex">
-          <a id="profile" className="nav-link" href="https://www.linkedin.com/in/hudson-schmidt" target="new" rel="noopener noreferrer">
+          <a id="profile" className="nav-link" href="https://www.linkedin.com/in/hudson-schmidt" target="_blank" rel="noopener noreferrer">
             <img src="./images/linkedin.png" alt="Linkedin Logo" width="30" height="30" className="rounded-circle"/>
           </a>
         </div>

@@ -1,29 +1,40 @@
 // Resume.jsx
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import { API_BASE, API_KEY } from '../config';
 import './resume.css';
-
-export const API_BASE = import.meta.env.VITE_API_BASE;
-export const API_KEY  = import.meta.env.VITE_API_KEY;
 
 function Resume() {
   const [resumeUrl, setResumeUrl] = useState(null);
-  const [error, setError]       = useState(null);
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    const controller = new AbortController();
+
     const fetchResume = async () => {
       try {
-        const res = await fetch(`${API_BASE}/resume/?api_key=${API_KEY}`);
+        const res = await fetch(`${API_BASE}/resume/`, {
+          headers: {
+            'access_token': API_KEY
+          },
+          signal: controller.signal
+        });
         if (!res.ok) throw new Error(`API error: ${res.status} ${res.statusText}`);
 
         const url = await res.json();   // FastAPI endpoint returns the PDF URL as plain JSON-encoded string
         setResumeUrl(url);
       } catch (err) {
-        console.error(err);
-        setError(err.message);
+        if (err.name !== 'AbortError') {
+          setError(err.message || 'Failed to load resume');
+        }
+      } finally {
+        setLoading(false);
       }
     };
 
     fetchResume();
+
+    return () => controller.abort();
   }, []);
 
   if (error) {
@@ -34,11 +45,20 @@ function Resume() {
     );
   }
 
+  if (loading) {
+    return (
+      <div id="resumebody" className="text-center">
+        <h1>Resume</h1>
+        <p>Loading...</p>
+      </div>
+    );
+  }
+
   if (!resumeUrl) {
     return (
       <div id="resumebody" className="text-center">
         <h1>Resume</h1>
-        <p>Loading…</p>
+        <p>No resume available</p>
       </div>
     );
   }

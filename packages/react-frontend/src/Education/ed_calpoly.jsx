@@ -1,9 +1,7 @@
-import React from "react";
-
 function EdCalPoly() {
   return (
-    <div class="row">
-      <div id="ed_col" class="col-sm-6">
+    <div className="row">
+      <div id="ed_col" className="col-sm-6">
         <h3>California Polytechnic University</h3>
         <p>San Luis Obispo, California
           <br></br>
@@ -11,7 +9,7 @@ function EdCalPoly() {
         <p>Second-year undergraduate student majoring in Computer Science with a concentration in Cybersecurity.</p>
         {/* <img id="ed_calpoly" src="../images/calpoly.png"></img> */}
       </div>
-      <div id="ed_col" class="col-sm-6">
+      <div id="ed_col" className="col-sm-6">
         <h3>Park City High School</h3>
         <p>Park City, Utah
           <br></br>
