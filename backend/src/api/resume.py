@@ -1,6 +1,5 @@
 import logging
-from fastapi import APIRouter, Depends, HTTPException
-from src.api import auth
+from fastapi import APIRouter, HTTPException
 import sqlalchemy
 from sqlalchemy.exc import NoResultFound, SQLAlchemyError
 from src import database as db
@@ -10,7 +9,6 @@ logger = logging.getLogger(__name__)
 router = APIRouter(
     prefix="/resume",
     tags=["resume"],
-    dependencies=[Depends(auth.get_api_key)],
 )
 
 @router.get("/", tags=["resume"], response_model=str)

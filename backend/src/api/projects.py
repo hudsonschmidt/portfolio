@@ -1,8 +1,7 @@
 import logging
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 from typing import List
-from src.api import auth
 import sqlalchemy
 from sqlalchemy.exc import SQLAlchemyError
 from src import database as db
@@ -12,7 +11,6 @@ logger = logging.getLogger(__name__)
 router = APIRouter(
     prefix="/projects",
     tags=["projects"],
-    dependencies=[Depends(auth.get_api_key)],
 )
 
 class Project(BaseModel):

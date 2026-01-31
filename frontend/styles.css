@@ -1,0 +1,639 @@
+/* =============================================
+   Global Styles
+   ============================================= */
+
+#app {
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 100;
+    background-color: #F5F5F5;
+    overflow-x: hidden;
+    padding: 0;
+}
+
+/* =============================================
+   Navigation
+   ============================================= */
+
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+}
+
+#profile {
+    border-radius: 100px;
+}
+
+.nav-link {
+    margin: 0 10px;
+    transition: color 0.3s;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+}
+
+.nav-link:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.d-flex .nav-link img:hover {
+    border-color: #333333;
+}
+
+/* =============================================
+   Home Page - Hero Section
+   ============================================= */
+
+.jumbotron {
+    background-image: url('images/bg1.JPG');
+    padding: 40vh 2rem;
+    margin-top: 60px;
+    color: #F5F5F5;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.jumbotron::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.jumbotron .container {
+    position: relative;
+    z-index: 1;
+}
+
+.jumbotron h1 {
+    font-size: 3.5em;
+    font-weight: bold;
+    text-align: right;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.jumbotron p {
+    font-size: 1.2em;
+    text-align: right;
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* =============================================
+   Home Page - Column Sections
+   ============================================= */
+
+#column-0 {
+    background-color: #333333;
+    padding: 70px;
+    text-align: left;
+    height: 370px;
+    line-height: 25px;
+    color: #F5F5F5;
+}
+
+#column-2 {
+    background-color: #f9f9f9;
+    padding: 150px;
+    text-align: left;
+    height: 500px;
+}
+
+#experience {
+    background-image: url('images/experience.JPG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
+}
+
+#projects {
+    background-image: url('images/projects.PNG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
+}
+
+#education {
+    background-image: url('images/education.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
+}
+
+#button {
+    color: black;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#button:hover {
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+/* =============================================
+   Experience Page
+   ============================================= */
+
+#expbody {
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 100;
+    background-color: #F5F5F5;
+    overflow-x: hidden;
+    padding: 0;
+    margin-top: 60px;
+}
+
+#exp_about {
+    background-color: #333333;
+    padding: 4rem 2rem;
+    text-align: left;
+    min-height: 200px;
+    line-height: 1.6;
+    color: #F5F5F5;
+}
+
+#exp_txt {
+    background-color: #f9f9f9;
+    padding: 4rem 2rem;
+    text-align: left;
+    min-height: 600px;
+}
+
+#wow, #bd, #ghidottis, #pf {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 500px;
+    position: relative;
+}
+
+#wow::before, #bd::before, #ghidottis::before, #pf::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease;
+}
+
+#wow:hover::before, #bd:hover::before, #ghidottis:hover::before, #pf:hover::before {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#wow {
+    background-image: url('images/wow.jpg');
+}
+
+#bd {
+    background-image: url('images/bd.jpg');
+}
+
+#ghidottis {
+    background-image: url('images/ghidottis.jpg');
+}
+
+#pf {
+    background-image: url('images/packfey.png');
+}
+
+/* =============================================
+   Education Page
+   ============================================= */
+
+#edbody {
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 100;
+    background-color: #F5F5F5;
+    overflow-x: hidden;
+    padding: 0;
+    margin-top: 60px;
+}
+
+#ed_about {
+    background-color: #333333;
+    padding: 4rem 2rem;
+    text-align: left;
+    min-height: 250px;
+    line-height: 1.6;
+    color: #F5F5F5;
+}
+
+#ed_col {
+    background-color: #f9f9f9;
+    padding: 4rem 2rem;
+    text-align: left;
+    min-height: 500px;
+}
+
+#calpoly {
+    background-image: url('images/calpoly.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 500px;
+    position: relative;
+}
+
+#calpoly::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease;
+}
+
+#calpoly:hover::before {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* =============================================
+   Projects Page
+   ============================================= */
+
+#projectbody {
+    margin-top: 60px;
+    padding: 1rem;
+}
+
+#sidebar {
+    margin-top: 20vh;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 0.5rem;
+}
+
+.project-main {
+    overflow-y: auto;
+    height: calc(100vh - 56px);
+    padding: 20px;
+    position: relative;
+}
+
+.card-date {
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    cursor: pointer;
+    background: white;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.card.expanded .card-img-top {
+    display: none;
+}
+
+.card-title {
+    text-align: center;
+    font-size: 1.25rem;
+    margin: 1rem 0;
+    color: #333;
+}
+
+.card.expanded .card-title {
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+.card.expanded .card-date {
+    text-align: left;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.additional-info {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.card.expanded {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    z-index: 1000;
+    background: white;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+}
+
+.close-button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    color: white;
+    background-color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+    background-color: #555;
+}
+
+.card-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}
+
+.card-overlay.active {
+    display: block;
+}
+
+/* =============================================
+   Resume Page
+   ============================================= */
+
+#resumebody {
+    margin-top: 80px;
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 100;
+    background-color: #F5F5F5;
+    overflow-x: hidden;
+    padding: 0;
+    text-align: center;
+}
+
+#resumebody h1 {
+    margin-bottom: 20px;
+}
+
+/* =============================================
+   404 Page
+   ============================================= */
+
+.not-found {
+    margin-top: 100px;
+    text-align: center;
+}
+
+/* =============================================
+   Responsive Design - Mobile
+   ============================================= */
+
+@media screen and (max-width: 768px) {
+    #app {
+        padding: 10px;
+    }
+
+    /* Navigation */
+    .navbar {
+        padding: 0.5rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+        margin-right: 0;
+    }
+
+    .navbar-toggler {
+        padding: 0.25rem 0.5rem;
+        font-size: 1rem;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-collapse {
+        background: white;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-top: 0.5rem;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+        margin: 0.5rem 0;
+        padding: 0.5rem;
+        text-align: center;
+    }
+
+    .navbar-nav {
+        margin: 0;
+        padding: 0;
+    }
+
+    .d-flex {
+        margin-left: auto;
+    }
+
+    /* Home Hero */
+    .jumbotron {
+        padding: 25vh 1rem;
+        text-align: center;
+    }
+
+    .jumbotron h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .jumbotron p {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    /* Home Columns */
+    #column-0,
+    #column-2 {
+        padding: 50px;
+        text-align: center;
+        height: auto;
+    }
+
+    #experience,
+    #projects,
+    #education {
+        height: 300px;
+    }
+
+    .row {
+        margin: 0;
+    }
+
+    .col-sm-6 {
+        padding: 0;
+    }
+
+    /* Experience Page */
+    #exp_about,
+    #exp_txt {
+        padding: 2rem 1rem;
+        text-align: center;
+    }
+
+    #wow, #bd, #ghidottis, #pf {
+        min-height: 300px;
+    }
+
+    /* Education Page */
+    #ed_about,
+    #ed_col {
+        padding: 2rem 1rem;
+        text-align: center;
+    }
+
+    #calpoly {
+        min-height: 300px;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Projects Page */
+    #projectbody {
+        padding: 0.5rem;
+    }
+
+    #sidebar {
+        margin-top: 1rem;
+        padding: 1rem;
+    }
+
+    .card {
+        margin-bottom: 1rem;
+    }
+
+    .card-img-top {
+        height: 200px;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
+
+    .card-body {
+        padding: 1rem;
+    }
+
+    .card.expanded {
+        width: 95%;
+        top: 50%;
+        max-height: 85vh;
+    }
+
+    .card.expanded .card-title {
+        font-size: 1.25rem;
+    }
+
+    .close-button {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+
+    /* Resume Page */
+    #resumebody {
+        padding: 20px;
+    }
+
+    #resumebody h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* =============================================
+   Responsive Design - Tablet
+   ============================================= */
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Home Hero */
+    .jumbotron {
+        padding: 30vh 2rem;
+    }
+
+    .jumbotron h1 {
+        font-size: 3rem;
+    }
+
+    .jumbotron p {
+        font-size: 1.15rem;
+    }
+
+    /* Experience Page */
+    #exp_about,
+    #exp_txt {
+        padding: 3rem 2rem;
+    }
+
+    #wow, #bd, #ghidottis, #pf {
+        min-height: 400px;
+    }
+
+    /* Education Page */
+    #ed_about,
+    #ed_col {
+        padding: 3rem 2rem;
+    }
+
+    #calpoly {
+        min-height: 400px;
+    }
+
+    /* Projects Page */
+    #sidebar {
+        margin-top: 10vh;
+    }
+
+    .card-img-top {
+        height: 220px;
+    }
+}
