@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hudson Schmidt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -30,6 +33,9 @@
                         <a class="nav-link" href="/education/">Education</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="/photography/">Photography</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="/resume/">Resume</a>
                     </li>
                 </ul>
@@ -49,7 +55,7 @@
             <div id="header" class="container">
                 <h1 class="display-4">Hudson Schmidt</h1>
                 <p class="lead">Student at Cal Poly San Luis Obispo</p>
-                <p class="lead">Majoring in Computer Science with a concentration in Cybersecurity</p>
+                <p class="lead">Majoring in Computer Science with an emphasis in Cybersecurity</p>
             </div>
         </div>
 
@@ -63,36 +69,38 @@
             </div>
         </div>
 
-        <!-- Experience Section -->
-        <div class="row">
-            <div id="experience" class="col-sm-6"></div>
-            <div id="column-2" class="col-sm-6">
-                <h3>Experience</h3>
-                <p>Apart from babysitting, I have spent most of my working life in restaurants. I also had the amazing opportunity to be an orientation leader for the freshmen at Cal Poly at the beginning of my second year.</p>
-                <a class="btn" id="button" href="/experience/">See More...</a>
+        <div class="card-grid">
+            <div class="card">
+                <a href="/experience/">
+                <img src="images/experience.JPG" alt="Experience" />
+                </a>
+                <p class="label">Experience</p> 
+            </div>
+            <div class="card">
+                <a href="/projects/">
+                <img src="images/projects.PNG" alt="Projects" />
+                </a>
+                <p class="label">Projects</p>
+            </div>
+            <div class="card">
+                <a href="/education/">
+                <img src="images/education.jpeg" alt="Education" />
+                </a>
+                <p class="label">Education</p>
+            </div>
+            <div class="card">
+                <a href="/photography/">
+                <img src="images/LTLogo3.png" alt="Photography" />
+                </a>
+                <p class="label">Photography</p>
+            </div>
+            <div class="card">
+                <a href="/resume/">
+                <img src="images/LTLogo3.png" alt="Resume" />
+                </a>
+                <p class="label">Resume</p>
             </div>
         </div>
-
-        <!-- Projects Section -->
-        <div class="row">
-            <div id="column-2" class="col-sm-6">
-                <h3>Projects</h3>
-                <p>I have been a part of several incredible opportunities that have made real-world differences. My current project is through the Empower Club at Cal Poly where we are designing a haptic headband to guide a blind marching band through their parade route.</p>
-                <a class="btn" id="button" href="/projects/">See More...</a>
-            </div>
-            <div id="projects" class="col-sm-6"></div>
-        </div>
-
-        <!-- Education Section -->
-        <div class="row">
-            <div id="education" class="col-sm-6"></div>
-            <div id="column-2" class="col-sm-6">
-                <h3>Education</h3>
-                <p>Throughout high school, I took many AP classes, concurrent enrollment classes, and computer science classes. All of which have put me ahead in my current education at Cal Poly where I have been an academic senior since the start of my second year.</p>
-                <a class="btn" id="button" href="/education/">See More...</a>
-            </div>
-        </div>
-    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>

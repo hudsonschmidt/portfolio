@@ -1,7 +1,7 @@
 import logging
 import time
 from fastapi import FastAPI, Request
-from src.api import projects, resume
+from src.api import projects, resume, experience, photography
 from starlette.middleware.cors import CORSMiddleware
 import sqlalchemy
 from src import database as db
@@ -13,7 +13,9 @@ Backend API for www.hudsonschmidt.com
 """
 tags_metadata = [
     {"name": "projects", "description": "Keep track of projects."},
+    {"name": "experience", "description": "Work experience entries."},
     {"name": "resume", "description": "Up to date resume."},
+    {"name": "photography", "description": "Photography portfolio."},
     {"name": "health", "description": "Health check endpoints."},
 ]
 
@@ -62,7 +64,9 @@ async def log_requests(request: Request, call_next):
 
 
 app.include_router(projects.router)
+app.include_router(experience.router)
 app.include_router(resume.router)
+app.include_router(photography.router)
 
 
 @app.get("/")
