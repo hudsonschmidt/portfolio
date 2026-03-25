@@ -43,12 +43,9 @@ function renderExperiences(experiences) {
 
     experiences.forEach((experience, index) => {
         const card = document.createElement('div');
-        card.className = 'exp-card' + (index % 2 !== 0 ? ' exp-card--reverse' : '');
+        card.className = 'exp-card';
 
         card.innerHTML = `
-            <div class="exp-card-image">
-                <img src="${experience.image}" alt="${experience.company}" loading="lazy">
-            </div>
             <div class="exp-card-body">
                 <span class="exp-card-date">${experience.date_range}</span>
                 <h2 class="exp-card-company">${experience.company}</h2>
