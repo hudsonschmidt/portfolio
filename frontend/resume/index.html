@@ -50,17 +50,20 @@
 
     <!-- Main Content -->
     <div id="resumebody">
-        <h1>Resume</h1>
+        <div class="doc-tabs">
+            <button class="doc-tab doc-tab--active" data-index="0">Resume</button>
+            <button class="doc-tab" data-index="1">CV</button>
+        </div>
         <p id="loading-message">Loading...</p>
-        <div id="resume-container" style="display: none;">
-            <embed id="resume-embed" src="" type="application/pdf" width="100%" height="1200px" style="border: none;">
+        <div id="doc-container" style="display: none;">
+            <embed id="doc-embed" src="" type="application/pdf" width="100%" height="1200px" style="border: none;">
             <p class="mt-3">
-                <a id="resume-download" href="" target="_blank" rel="noopener noreferrer">Download PDF</a>
+                <a id="doc-download" href="" target="_blank" rel="noopener noreferrer">Download PDF</a>
             </p>
         </div>
         <div id="error-message" class="alert alert-danger" style="display: none;"></div>
         <div id="no-resume-message" style="display: none;">
-            <p>No resume available</p>
+            <p>No documents available</p>
         </div>
     </div>
 

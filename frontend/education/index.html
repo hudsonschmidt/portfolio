@@ -49,26 +49,48 @@
     </nav>
 
     <!-- Main Content -->
-    <div id="edbody" class="container-fluid">
-        <!-- About Section -->
-        <div class="row">
-            <div id="ed_about" class="col-sm-12">
-                <h3>Education</h3>
-                <p>Throughout high school, I took many AP classes, concurrent enrollment classes, and computer science classes. All of which have put me ahead in my current education at Cal Poly where I have been an academic senior since the start of my second year.</p>
-            </div>
+    <div id="edbody">
+        <!-- Hero Section -->
+        <div class="ed-hero">
+            <h1>Education</h1>
+            <p>AP and concurrent enrollment courses in high school put me ahead at Cal Poly, where I've been an academic senior since the start of my second year.</p>
         </div>
 
-        <!-- Schools -->
-        <div class="row">
-            <div id="ed_col" class="col-sm-6">
-                <h3>California Polytechnic University</h3>
-                <p>San Luis Obispo, California<br>September 2023 - Current</p>
-                <p>Second-year undergraduate student majoring in Computer Science with a concentration in Cybersecurity.</p>
+        <!-- School Cards -->
+        <div class="ed-cards">
+            <!-- Cal Poly -->
+            <div class="ed-card">
+                <div class="ed-card-image">
+                    <img src="../images/calpoly.png" alt="Cal Poly San Luis Obispo" loading="lazy">
+                </div>
+                <div class="ed-card-body">
+                    <span class="ed-card-date">September 2023 - Expected June 2027</span>
+                    <h2 class="ed-card-school">California Polytechnic State University</h2>
+                    <p class="ed-card-degree">B.S. Computer Science, Emphasis in Cybersecurity</p>
+                    <p class="ed-card-desc">San Luis Obispo, California</p>
+                    <p class="ed-coursework-label">Completed Coursework</p>
+                    <ul class="ed-coursework-list">
+                        <li>Wireless Security</li>
+                        <li>Database Systems</li>
+                        <li>Computer Security</li>
+                        <li>Privacy: Policy &amp; Technology</li>
+                        <li>Distributed Computing</li>
+                    </ul>
+                </div>
             </div>
-            <div id="ed_col" class="col-sm-6">
-                <h3>Park City High School</h3>
-                <p>Park City, Utah<br>August 2019 - June 2023</p>
-                <p>Graduate of Park City High School in June 2023 with a 4.3 GPA and a seal of biliteracy in French.</p>
+
+            <!-- Park City High School -->
+            <div class="ed-card ed-card--reverse">
+                <div class="ed-card-image">
+                    <img src="../images/pchs.jpg" alt="Park City High School" loading="lazy">
+                </div>
+                <div class="ed-card-body">
+                    <span class="ed-card-date">August 2019 - June 2023</span>
+                    <h2 class="ed-card-school">Park City High School</h2>
+                    <p class="ed-card-degree">High School Diploma &mdash; 4.3 GPA</p>
+                    <p class="ed-card-desc">Park City, Utah</p>
+                    <p class="ed-card-desc">Graduated with a Seal of Biliteracy in French. Completed AP and concurrent enrollment courses that gave me a head start in college.</p>
+                </div>
             </div>
         </div>
     </div>

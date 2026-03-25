@@ -32,6 +32,7 @@ def get_projects() -> List[Project]:
                     """
                     SELECT *
                     FROM project_data
+                    ORDER BY id DESC
                     """
                 )
             ).fetchall()

@@ -146,68 +146,137 @@ html, body {
    ============================================= */
 
 #expbody {
-    font-family: 'Helvetica';
-    font-style: normal;
-    font-weight: 100;
+    font-family: 'Inter', 'Helvetica', sans-serif;
     background-color: #F5F5F5;
     overflow-x: hidden;
     padding: 0;
     margin-top: 60px;
 }
 
-#exp_about {
+.exp-hero {
     background-color: #333333;
-    padding: 4rem 2rem;
-    text-align: left;
-    min-height: 200px;
-    line-height: 1.6;
+    padding: 5rem 2rem 4rem;
+    text-align: center;
     color: #F5F5F5;
 }
 
-#exp_txt {
-    background-color: #f9f9f9;
-    padding: 4rem 2rem;
-    text-align: left;
-    min-height: 600px;
+.exp-hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.02em;
 }
 
-#wow, #bd, #ghidottis, #pf {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 500px;
+.exp-hero p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.85;
+    line-height: 1.6;
+}
+
+.exp-timeline {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+}
+
+.exp-timeline-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.exp-card {
+    display: flex;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.exp-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.exp-card--reverse {
+    flex-direction: row-reverse;
+}
+
+.exp-card-image {
+    flex: 0 0 40%;
+    min-height: 300px;
     position: relative;
+    overflow: hidden;
 }
 
-#wow::before, #bd::before, #ghidottis::before, #pf::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.3);
-    transition: background 0.3s ease;
+.exp-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
 }
 
-#wow:hover::before, #bd:hover::before, #ghidottis:hover::before, #pf:hover::before {
-    background: rgba(0, 0, 0, 0.5);
+.exp-card:hover .exp-card-image img {
+    transform: scale(1.05);
 }
 
-#wow {
-    background-image: url('images/wow.jpg');
+.exp-card-body {
+    flex: 1;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-#bd {
-    background-image: url('images/bd.jpg');
+.exp-card-date {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #888;
+    margin-bottom: 0.5rem;
 }
 
-#ghidottis {
-    background-image: url('images/ghidottis.jpg');
+.exp-card-company {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #222;
+    margin: 0 0 0.25rem;
+    letter-spacing: -0.01em;
 }
 
-#pf {
-    background-image: url('images/packfey.png');
+.exp-card-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.exp-card-desc {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #444;
+    margin: 0;
+}
+
+.loading-message {
+    text-align: center;
+    color: #888;
+    padding: 3rem 0;
+    font-size: 1rem;
+}
+
+.error-message {
+    text-align: center;
+    color: #c0392b;
+    padding: 2rem 0;
+    font-size: 1rem;
 }
 
 /* =============================================
@@ -215,53 +284,151 @@ html, body {
    ============================================= */
 
 #edbody {
-    font-family: 'Helvetica';
-    font-style: normal;
-    font-weight: 100;
+    font-family: 'Inter', 'Helvetica', sans-serif;
     background-color: #F5F5F5;
     overflow-x: hidden;
     padding: 0;
     margin-top: 60px;
 }
 
-#ed_about {
+.ed-hero {
     background-color: #333333;
-    padding: 4rem 2rem;
-    text-align: left;
-    min-height: 250px;
-    line-height: 1.6;
+    padding: 5rem 2rem 4rem;
+    text-align: center;
     color: #F5F5F5;
 }
 
-#ed_col {
-    background-color: #f9f9f9;
-    padding: 4rem 2rem;
-    text-align: left;
-    min-height: 500px;
+.ed-hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.02em;
 }
 
-#calpoly {
-    background-image: url('images/calpoly.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 500px;
+.ed-hero p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.85;
+    line-height: 1.6;
+}
+
+.ed-cards {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.ed-card {
+    display: flex;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ed-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.ed-card--reverse {
+    flex-direction: row-reverse;
+}
+
+.ed-card-image {
+    flex: 0 0 40%;
+    min-height: 300px;
     position: relative;
+    overflow: hidden;
 }
 
-#calpoly::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.3);
-    transition: background 0.3s ease;
+.ed-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
 }
 
-#calpoly:hover::before {
-    background: rgba(0, 0, 0, 0.5);
+.ed-card:hover .ed-card-image img {
+    transform: scale(1.05);
+}
+
+.ed-card-body {
+    flex: 1;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ed-card-date {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #888;
+    margin-bottom: 0.5rem;
+}
+
+.ed-card-school {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #222;
+    margin: 0 0 0.25rem;
+    letter-spacing: -0.01em;
+}
+
+.ed-card-degree {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.ed-card-desc {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #444;
+    margin: 0 0 1rem;
+}
+
+.ed-card-desc:last-child {
+    margin-bottom: 0;
+}
+
+.ed-coursework-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #888;
+    margin-bottom: 0.5rem;
+}
+
+.ed-coursework-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ed-coursework-list li {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #555;
+    background: #f0f0f0;
+    padding: 0.3rem 0.7rem;
+    border-radius: 100px;
 }
 
 .card-grid {
@@ -547,18 +714,43 @@ html, body {
    ============================================= */
 
 #resumebody {
-    margin-top: 80px;
-    font-family: 'Helvetica';
-    font-style: normal;
-    font-weight: 100;
+    margin-top: 60px;
+    font-family: 'Inter', 'Helvetica', sans-serif;
     background-color: #F5F5F5;
     overflow-x: hidden;
-    padding: 0;
+    padding: 1.5rem 1rem 2rem;
     text-align: center;
 }
 
-#resumebody h1 {
-    margin-bottom: 20px;
+.doc-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.doc-tab {
+    padding: 0.75rem 2rem;
+    font-family: 'Inter', 'Helvetica', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #888;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    cursor: pointer;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.doc-tab:hover {
+    color: #444;
+}
+
+.doc-tab--active {
+    color: #222;
+    border-bottom-color: #333;
 }
 
 /* =============================================
@@ -658,25 +850,80 @@ html, body {
     }
 
     /* Experience Page */
-    #exp_about,
-    #exp_txt {
-        padding: 2rem 1rem;
-        text-align: center;
+    .exp-hero {
+        padding: 3.5rem 1.5rem 2.5rem;
     }
 
-    #wow, #bd, #ghidottis, #pf {
-        min-height: 300px;
+    .exp-hero h1 {
+        font-size: 2rem;
+    }
+
+    .exp-hero p {
+        font-size: 1rem;
+    }
+
+    .exp-timeline {
+        padding: 2rem 1rem 3rem;
+    }
+
+    .exp-timeline-inner {
+        gap: 1.5rem;
+    }
+
+    .exp-card,
+    .exp-card--reverse {
+        flex-direction: column;
+    }
+
+    .exp-card-image {
+        flex: none;
+        min-height: 200px;
+        max-height: 220px;
+    }
+
+    .exp-card-body {
+        padding: 1.5rem;
+    }
+
+    .exp-card-company {
+        font-size: 1.25rem;
     }
 
     /* Education Page */
-    #ed_about,
-    #ed_col {
-        padding: 2rem 1rem;
-        text-align: center;
+    .ed-hero {
+        padding: 3.5rem 1.5rem 2.5rem;
     }
 
-    #calpoly {
-        min-height: 300px;
+    .ed-hero h1 {
+        font-size: 2rem;
+    }
+
+    .ed-hero p {
+        font-size: 1rem;
+    }
+
+    .ed-cards {
+        padding: 2rem 1rem 3rem;
+        gap: 1.5rem;
+    }
+
+    .ed-card,
+    .ed-card--reverse {
+        flex-direction: column;
+    }
+
+    .ed-card-image {
+        flex: none;
+        min-height: 200px;
+        max-height: 220px;
+    }
+
+    .ed-card-body {
+        padding: 1.5rem;
+    }
+
+    .ed-card-school {
+        font-size: 1.25rem;
     }
 
     h3 {
@@ -768,23 +1015,35 @@ html, body {
     }
 
     /* Experience Page */
-    #exp_about,
-    #exp_txt {
-        padding: 3rem 2rem;
+    .exp-card,
+    .exp-card--reverse {
+        flex-direction: column;
     }
 
-    #wow, #bd, #ghidottis, #pf {
-        min-height: 400px;
+    .exp-card-image {
+        flex: none;
+        min-height: 250px;
+        max-height: 280px;
+    }
+
+    .exp-card-body {
+        padding: 2rem;
     }
 
     /* Education Page */
-    #ed_about,
-    #ed_col {
-        padding: 3rem 2rem;
+    .ed-card,
+    .ed-card--reverse {
+        flex-direction: column;
     }
 
-    #calpoly {
-        min-height: 400px;
+    .ed-card-image {
+        flex: none;
+        min-height: 250px;
+        max-height: 280px;
+    }
+
+    .ed-card-body {
+        padding: 2rem;
     }
 
     /* Projects Page */

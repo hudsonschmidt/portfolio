@@ -1,15 +1,15 @@
 // Resume page functionality
 document.addEventListener('DOMContentLoaded', function() {
-    loadResume();
+    loadDocuments();
 });
 
-async function loadResume() {
+let docLinks = [];
+
+async function loadDocuments() {
     const loadingMessage = document.getElementById('loading-message');
     const errorMessage = document.getElementById('error-message');
-    const resumeContainer = document.getElementById('resume-container');
+    const docContainer = document.getElementById('doc-container');
     const noResumeMessage = document.getElementById('no-resume-message');
-    const resumeEmbed = document.getElementById('resume-embed');
-    const resumeDownload = document.getElementById('resume-download');
 
     try {
         const response = await fetch(`${API_BASE}/resume/`);
@@ -18,31 +18,53 @@ async function loadResume() {
             throw new Error(`API error: ${response.status} ${response.statusText}`);
         }
 
-        const resumeUrl = await response.json();
+        docLinks = await response.json();
 
-        // Hide loading message
         if (loadingMessage) {
             loadingMessage.style.display = 'none';
         }
 
-        if (resumeUrl) {
-            // Show resume
-            resumeEmbed.src = resumeUrl;
-            resumeDownload.href = resumeUrl;
-            resumeContainer.style.display = 'block';
+        if (docLinks && docLinks.length > 0) {
+            showDocument(0);
+            docContainer.style.display = 'block';
+            initTabs();
         } else {
-            // No resume available
             noResumeMessage.style.display = 'block';
         }
 
     } catch (err) {
-        console.error('Failed to load resume:', err);
+        console.error('Failed to load documents:', err);
         if (loadingMessage) {
             loadingMessage.style.display = 'none';
         }
         if (errorMessage) {
             errorMessage.style.display = 'block';
-            errorMessage.textContent = `Failed to load resume: ${err.message}`;
+            errorMessage.textContent = `Failed to load documents: ${err.message}`;
         }
     }
+}
+
+function showDocument(index) {
+    const docEmbed = document.getElementById('doc-embed');
+    const docDownload = document.getElementById('doc-download');
+
+    if (docLinks[index]) {
+        docEmbed.src = docLinks[index];
+        docDownload.href = docLinks[index];
+    }
+}
+
+function initTabs() {
+    const tabs = document.querySelectorAll('.doc-tab');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            const index = parseInt(this.dataset.index);
+
+            tabs.forEach(t => t.classList.remove('doc-tab--active'));
+            this.classList.add('doc-tab--active');
+
+            showDocument(index);
+        });
+    });
 }

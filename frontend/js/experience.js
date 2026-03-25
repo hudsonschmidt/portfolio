@@ -19,12 +19,10 @@ async function loadExperience() {
         const data = await response.json();
         const experiences = [...data].sort((a, b) => Number(a.id) - Number(b.id));
 
-        // Hide loading message
         if (loadingMessage) {
             loadingMessage.style.display = 'none';
         }
 
-        // Render experiences
         renderExperiences(experiences);
 
     } catch (err) {
@@ -43,16 +41,19 @@ function renderExperiences(experiences) {
     const experienceContainer = document.getElementById('experience-cards');
     experienceContainer.innerHTML = '';
 
-    experiences.forEach(experience => {
+    experiences.forEach((experience, index) => {
         const card = document.createElement('div');
-        card.className = 'experience-card';
+        card.className = 'exp-card' + (index % 2 !== 0 ? ' exp-card--reverse' : '');
 
         card.innerHTML = `
-            <div class="experience-image" style="background-image: url('${experience.image}');" role="img" aria-label="${experience.company} workplace"></div>
-            <div class="experience-content">
-                <h3>${experience.company}</h3>
-                <p class="experience-meta">${experience.title}<br>${experience.date_range}</p>
-                <p>${experience.description}</p>
+            <div class="exp-card-image">
+                <img src="${experience.image}" alt="${experience.company}" loading="lazy">
+            </div>
+            <div class="exp-card-body">
+                <span class="exp-card-date">${experience.date_range}</span>
+                <h2 class="exp-card-company">${experience.company}</h2>
+                <p class="exp-card-title">${experience.title}</p>
+                <p class="exp-card-desc">${experience.description}</p>
             </div>
         `;
 
