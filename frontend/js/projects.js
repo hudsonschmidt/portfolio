@@ -31,7 +31,7 @@ async function loadProjects() {
         }
 
         const data = await response.json();
-        const projects = [...data].sort((a, b) => Number(a.id) - Number(b.id));
+        const projects = [...data].sort((a, b) => Number(b.id) - Number(a.id));
 
         // Hide loading message
         if (loadingMessage) {

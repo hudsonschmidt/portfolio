@@ -47,10 +47,13 @@ async function loadDocuments() {
 function showDocument(index) {
     const docEmbed = document.getElementById('doc-embed');
     const docDownload = document.getElementById('doc-download');
+    const url = Array.isArray(docLinks) ? docLinks[index] : docLinks;
 
-    if (docLinks[index]) {
-        docEmbed.src = docLinks[index];
-        docDownload.href = docLinks[index];
+    if (url && docEmbed) {
+        docEmbed.src = url;
+    }
+    if (url && docDownload) {
+        docDownload.href = url;
     }
 }
 
