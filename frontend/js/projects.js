@@ -53,13 +53,6 @@ async function loadProjects() {
     }
 }
 
-function getThumbnailUrl(url) {
-    // Use _thumb version: photo.jpg -> photo_thumb.jpg
-    const lastDot = url.lastIndexOf('.');
-    if (lastDot === -1) return url;
-    return url.substring(0, lastDot) + '_thumb' + url.substring(lastDot);
-}
-
 function renderProjects(projects) {
     const projectCards = document.getElementById('project-cards');
     projectCards.innerHTML = '';
@@ -76,7 +69,7 @@ function renderProjects(projects) {
         card.dataset.projectId = project.id;
 
         card.innerHTML = `
-            <img src="${getThumbnailUrl(project.img)}" alt="Screenshot of ${project.name} project" class="card-img-top" loading="lazy" onerror="handleImageError(this)">
+            <img src="${project.img}" alt="Screenshot of ${project.name} project" class="card-img-top" loading="lazy" onerror="handleImageError(this)">
             <div class="card-body">
                 <h5 class="card-title">${project.name}</h5>
                 <p class="card-date">${project.date}</p>
