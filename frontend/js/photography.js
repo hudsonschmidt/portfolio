@@ -35,6 +35,13 @@ async function loadPhotos() {
     }
 }
 
+function getThumbnailUrl(url) {
+    // Use _thumb version: photo.jpg -> photo_thumb.jpg
+    const lastDot = url.lastIndexOf('.');
+    if (lastDot === -1) return url;
+    return url.substring(0, lastDot) + '_thumb' + url.substring(lastDot);
+}
+
 function renderGallery(photos) {
     const gallery = document.getElementById('photo-gallery');
     gallery.innerHTML = '';
@@ -44,7 +51,7 @@ function renderGallery(photos) {
         item.className = 'gallery-item';
 
         const img = document.createElement('img');
-        img.src = photo.url;
+        img.src = getThumbnailUrl(photo.url);
         img.alt = photo.title;
         img.loading = 'lazy';
 
@@ -55,6 +62,7 @@ function renderGallery(photos) {
         item.appendChild(img);
         item.appendChild(overlay);
 
+        // Full resolution on click
         item.addEventListener('click', function() {
             openLightbox(photo.url, photo.title);
         });
