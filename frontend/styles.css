@@ -597,12 +597,8 @@ html, body {
     height: 250px;
     object-fit: cover;
     object-position: center;
-    transition: transform 0.3s ease;
 }
 
-#projectbody .card:hover .card-img-top {
-    transform: scale(1.05);
-}
 
 #projectbody .card.expanded .card-img-top {
     display: none;

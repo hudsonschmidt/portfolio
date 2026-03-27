@@ -17,6 +17,12 @@ async function loadPhotos() {
 
         const photos = await response.json();
 
+        // Shuffle photos randomly
+        for (let i = photos.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [photos[i], photos[j]] = [photos[j], photos[i]];
+        }
+
         if (loadingMessage) {
             loadingMessage.style.display = 'none';
         }
