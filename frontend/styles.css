@@ -719,6 +719,12 @@ html, body {
     border-bottom-color: #333;
 }
 
+.doc-updated {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
 /* =============================================
    404 Page
    ============================================= */

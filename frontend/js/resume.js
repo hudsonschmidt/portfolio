@@ -47,13 +47,23 @@ async function loadDocuments() {
 function showDocument(index) {
     const docEmbed = document.getElementById('doc-embed');
     const docDownload = document.getElementById('doc-download');
-    const url = Array.isArray(docLinks) ? docLinks[index] : docLinks;
+    const docUpdated = document.getElementById('doc-updated');
+    const entry = Array.isArray(docLinks) ? docLinks[index] : docLinks;
+
+    // Entries are objects ({link, last_updated}) but may be plain URL
+    // strings if an older backend version is still deployed.
+    const url = typeof entry === 'string' ? entry : entry && entry.link;
+    const lastUpdated = (entry && entry.last_updated) || '';
 
     if (url && docEmbed) {
         docEmbed.src = url;
     }
     if (url && docDownload) {
         docDownload.href = url;
+    }
+    if (docUpdated) {
+        docUpdated.textContent = lastUpdated ? `Last updated: ${lastUpdated}` : '';
+        docUpdated.style.display = lastUpdated ? 'block' : 'none';
     }
 }
 
