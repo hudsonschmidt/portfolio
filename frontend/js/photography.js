@@ -1,5 +1,12 @@
 // Photography page functionality
+const PHOTO_CREDIT = 'Hudson Schmidt';
+const LICENSE_URL = 'https://www.hudsonschmidt.com/photography/#license';
+
 document.addEventListener('DOMContentLoaded', function() {
+    const footerYear = document.getElementById('footer-year');
+    if (footerYear) {
+        footerYear.textContent = new Date().getFullYear();
+    }
     loadPhotos();
 });
 
@@ -60,6 +67,8 @@ function renderGallery(photos) {
         img.src = getThumbnailUrl(photo.url);
         img.alt = photo.title;
         img.loading = 'lazy';
+        // Stops drag-to-desktop saving; not a real barrier, just removes the easiest path
+        img.draggable = false;
 
         const overlay = document.createElement('div');
         overlay.className = 'gallery-overlay';
@@ -75,6 +84,42 @@ function renderGallery(photos) {
 
         gallery.appendChild(item);
     });
+
+    addLicenseMetadata(photos);
+}
+
+// Machine-readable rights info for search engines and image crawlers.
+// This is the web equivalent of EXIF/IPTC — it travels with the page, not the file.
+function addLicenseMetadata(photos) {
+    const existing = document.getElementById('photo-license-data');
+    if (existing) {
+        existing.remove();
+    }
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.id = 'photo-license-data';
+    script.textContent = JSON.stringify(photos.map(photo => ({
+        '@context': 'https://schema.org',
+        '@type': 'ImageObject',
+        contentUrl: photo.url,
+        name: photo.title,
+        creator: {
+            '@type': 'Person',
+            name: PHOTO_CREDIT,
+            url: 'https://www.hudsonschmidt.com'
+        },
+        copyrightHolder: {
+            '@type': 'Person',
+            name: PHOTO_CREDIT
+        },
+        copyrightNotice: `© ${PHOTO_CREDIT}`,
+        creditText: PHOTO_CREDIT,
+        license: LICENSE_URL,
+        acquireLicensePage: LICENSE_URL
+    })));
+
+    document.head.appendChild(script);
 }
 
 function openLightbox(url, title) {
@@ -84,6 +129,7 @@ function openLightbox(url, title) {
 
     lightboxImg.src = url;
     lightboxImg.alt = title;
+    lightboxImg.draggable = false;
     lightboxTitle.textContent = title;
     lightbox.classList.add('active');
     document.body.style.overflow = 'hidden';
