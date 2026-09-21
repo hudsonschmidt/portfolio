@@ -454,7 +454,14 @@ html, body {
 }
 
 #photobody h1 {
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.photo-intro {
+    max-width: 640px;
+    margin: 0 auto 1.5rem;
+    font-size: 1rem;
+    color: #555;
 }
 
 .gallery {
