@@ -300,35 +300,17 @@ html, body {
 }
 
 .ed-card {
-    display: flex;
     background: #fff;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .ed-card:hover {
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
-
-.ed-card--reverse {
-    flex-direction: row-reverse;
-}
-
-.ed-card-image {
-    flex: 0 0 40%;
-    min-height: 300px;
-    position: relative;
-    overflow: hidden;
-}
-
-.ed-card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
 
 .ed-card-body {
     flex: 1;
@@ -352,26 +334,40 @@ html, body {
     font-size: 1.5rem;
     font-weight: 700;
     color: #222;
-    margin: 0 0 0.25rem;
+    margin: 0 0 0.35rem;
     letter-spacing: -0.01em;
+    line-height: 1.3;
 }
 
 .ed-card-degree {
     font-size: 1rem;
     font-weight: 500;
     color: #555;
-    margin-bottom: 1rem;
+    line-height: 1.5;
+    margin: 0 0 0.35rem;
+}
+
+.ed-card-location {
+    font-size: 0.875rem;
+    color: #888;
+    margin: 0 0 1.25rem;
 }
 
 .ed-card-desc {
     font-size: 0.95rem;
     line-height: 1.7;
     color: #444;
-    margin: 0 0 1rem;
+    margin: 0;
 }
 
-.ed-card-desc:last-child {
-    margin-bottom: 0;
+.ed-card-desc + .ed-card-desc {
+    margin-top: 0.75rem;
+}
+
+.ed-coursework {
+    margin-top: 1.75rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eee;
 }
 
 .ed-coursework-label {
@@ -380,13 +376,13 @@ html, body {
     text-transform: uppercase;
     letter-spacing: 0.06em;
     color: #888;
-    margin-bottom: 0.5rem;
+    margin: 0 0 0.75rem;
 }
 
 .ed-coursework-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.4rem;
+    gap: 0.5rem;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -396,8 +392,9 @@ html, body {
     font-size: 0.8rem;
     font-weight: 500;
     color: #555;
-    background: #f0f0f0;
-    padding: 0.3rem 0.7rem;
+    background: #f5f5f5;
+    border: 1px solid #ececec;
+    padding: 0.35rem 0.8rem;
     border-radius: 100px;
 }
 
@@ -868,23 +865,17 @@ html, body {
         gap: 1.5rem;
     }
 
-    .ed-card,
-    .ed-card--reverse {
-        flex-direction: column;
-    }
-
-    .ed-card-image {
-        flex: none;
-        min-height: 200px;
-        max-height: 220px;
-    }
-
     .ed-card-body {
         padding: 1.5rem;
     }
 
     .ed-card-school {
         font-size: 1.25rem;
+    }
+
+    .ed-coursework {
+        margin-top: 1.25rem;
+        padding-top: 1.25rem;
     }
 
     h3 {
@@ -981,17 +972,6 @@ html, body {
     }
 
     /* Education Page */
-    .ed-card,
-    .ed-card--reverse {
-        flex-direction: column;
-    }
-
-    .ed-card-image {
-        flex: none;
-        min-height: 250px;
-        max-height: 280px;
-    }
-
     .ed-card-body {
         padding: 2rem;
     }
